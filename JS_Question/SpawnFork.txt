@@ -1,0 +1,14 @@
+This starts sending data back to a parent process from the child process as soon as the child process starts executing.
+
+1.	This does not send data automatically, but we can use a global module name process to send data from the child process and 
+    in the parent module, using the name of the child the process to send to the child process.
+
+It creates a new process through command rather than running on the same node process.	
+It makes several individual processes (child processes) but all of them run on the same node process as the parent.
+
+In this, no new V8 instance is created.
+In this, a new V8 instance is created.
+
+
+It is used when we want the child process to return a large amount of data back to the parent process.	
+It is used to separate computation-intensive tasks from the main event loop.

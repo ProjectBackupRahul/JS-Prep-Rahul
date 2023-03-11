@@ -1,0 +1,16 @@
+import Perf from 'react-addons-perf'; // ES6
+var Perf = require('react-addons-perf'); // ES5 with npm
+
+
+Getting Measurements
+start()
+stop()
+getLastMeasurements()
+Printing Results
+The following methods use the measurements returned by Perf.getLastMeasurements() to pretty-print the result.
+
+printInclusive()
+printExclusive()
+printWasted()
+printOperations()
+printDOM()

@@ -1,0 +1,20 @@
+There is an apparent gap between the way we we write javascrip code today and the code that browser can comprehand and execute. 
+to fill this gap, developers often depend on various resources and experimental features thar not supported morder browsers. 
+
+
+ >> now many available javascript moduel bundlers can be used for closing the gab How ever the most tried and tested bundler is 
+ React Webpack, Which many developers have used for achiving cross-browser compatible coding standards while retining absolute 
+ control in the browser hand opening up room for customization and optimization of
+
+
+ Benifit of Webpack: 
+
+ Is Webpack an absolute must for creating React Apps ? No. there are alternatives available such as 
+    > Parsel
+    > Browserify
+    > Brunch.
+
+    However Webpack is the one that is widely accepted module that has proven its merit across the global react.js dev community.
+     [] Enhance the scalability of your react app
+     [] Optimize Development time with hot module replacement
+     [] Has absolute control over react Build system 

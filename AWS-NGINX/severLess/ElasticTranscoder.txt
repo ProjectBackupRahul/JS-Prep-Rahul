@@ -1,0 +1,4 @@
+Elastic Transcoder is an AWS Service Tool that helps you in changing a
+ video’s format and resolution to support various devices like tablets,
+  smartphones, and laptops of different resolutions.
+

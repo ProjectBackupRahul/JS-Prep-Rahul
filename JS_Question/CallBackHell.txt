@@ -1,0 +1,19 @@
+What is callback hell?
+This is a big issue caused by coding with complex nested callbacks. Here, each and every callback takes an argument
+ that is a result of the previous callbacks. In this manner, The code structure looks like a pyramid,
+  making it difficult to read and maintain. Also, if there is an error in one function, then all other functions get affected.
+
+Example: This is the example of typical callback hell.
+
+
+
+const makeBurger = () => {
+    const meat = getMeat();
+    const patty = cookMeat(meat);
+    const buns = getBuns();
+    const burger = putMeatBetweenBuns(buns, meet);
+    return burger;
+  };
+  
+  const burger = makeBurger();
+  serve(burger);

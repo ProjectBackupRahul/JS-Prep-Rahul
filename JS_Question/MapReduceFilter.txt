@@ -1,0 +1,86 @@
+Q3. map() method: 
+
+It applies a given function on all the elements of the array and returns the updated array.
+ It is the simpler and shorter code instead of a loop. The map is similar to the following code:
+arr = new Array(1, 2, 3, 6, 5, 4);
+for(let i = 0; i < 6; i++) {
+    arr[i] *= 3;
+}
+Syntax:
+
+array.map(function_to_be_applied)
+array.map(function (args) {
+    // code;
+})
+Example:
+
+function triple(n){
+    return n*3;
+}    
+arr = new Array(1, 2, 3, 6, 5, 4);
+  
+var new_arr = arr.map(triple)
+console.log(new_arr);
+
+Output: 
+[ 3, 6, 9, 18, 15, 12 ]
+
+Q2. reduce() method: 
+
+It reduces all the elements of the array to a single value by repeatedly applying a function. 
+It is an alternative of using a loop and updating the result for every scanned element. 
+Reduce can be used in place of the following code:
+arr = new Array(1, 2, 3, 6, 5, 4);
+result = 1
+for(let i = 0; i < 6; i++) {
+    result = result * arr[i];
+}
+Syntax:
+
+
+array.reduce(function_to_be_applied)
+array.reduce(function (args) {
+    // code;
+})
+Example:
+
+function product(a, b){
+    return a * b;
+}
+arr = new Array(1, 2, 3, 6, 5, 4);
+  
+var product_of_arr = arr.reduce(product)
+console.log(product_of_arr)
+Output:
+
+720
+Q3. filter() method:
+
+ It filters the elements of the array that return false for the applied condition and returns the
+  array which 
+contains elements that satisfy the applied condition. It is a simpler and shorter code instead of the below code using a loop:
+
+arr = new Array(1, 2, 3, 6, 5, 4);
+new_arr = {}
+for(let i = 0; i < 6; i++) {
+    if(arr[i] % 2 == 0) {
+         new_arr.push(arr[i]);           
+    }
+}
+Syntax:
+
+array.filter(function_to_be_applied)
+array.filter(function (args) {
+    // condition;
+})
+Example:
+
+arr = new Array(1, 2, 3, 6, 5, 4);
+var new_arr = arr.filter(function (x){
+    return x % 2==0;
+});
+  
+console.log(new_arr)
+Output:
+
+[ 2, 6, 4 ]

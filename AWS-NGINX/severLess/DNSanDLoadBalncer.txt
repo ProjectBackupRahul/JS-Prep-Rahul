@@ -1,0 +1,2 @@
+NS and Load Balancer are a part of IaaS-Storage Cloud Service.
+

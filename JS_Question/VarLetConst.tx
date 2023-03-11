@@ -1,0 +1,19 @@
+1.const declarations are block scoped
+Like let declarations, const declarations can only be accessed within the block they were declared.
+arr = new Array(1, 2, 3, 6, 5, 4);
+for(let i = 0; i < 6; i++) {
+    arr[i] *= 3;
+}       
+2. const cannot be updated or re-declared
+This means that the value of a variable declared with const remains the same within its scope.
+ It cannot be updated or re-declared. So if we declare a variable with const, we can neither do this:
+
+ 3. var Can be redeclared & Reassignt inside a scope , where as let can not be
+
+  example: unction a() {
+    var i = 1 ;
+    console.log(i)
+    var i = 12;
+     console.log(i)
+}
+a();

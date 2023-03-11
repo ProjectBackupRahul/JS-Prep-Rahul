@@ -1,0 +1,10 @@
+In Node, there are two types of threads: one Event Loop (aka the main loop, the main thread, event thread, etc.), 
+and a pool of k Workers in a Worker Pool (aka the thread pool). 
+The libuv library maintains a pool of threads that are used by node.js to perform long-running operations in the background, 
+without blocking its main thread.
+
+Example of Theard pool Lib: 
+
+ npm libuv:
+
+

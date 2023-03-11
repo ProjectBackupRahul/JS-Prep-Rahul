@@ -1,0 +1,13 @@
+Closure means that an inner function always has access to the vars and parameters of its outer function,
+ even after the outer function has returned.
+ 
+ function OuterFunction() {
+
+    var outerVariable = 1;
+
+    function InnerFunction() {
+        alert(outerVariable);
+    }
+
+    InnerFunction();
+}

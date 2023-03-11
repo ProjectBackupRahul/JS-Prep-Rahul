@@ -1,0 +1,39 @@
+Q7 Expalin universal selector in CSS
+
+   Universal selectors is used to match element types. For
+
+   Below is example for the same.
+
+   *{
+     color: #FFFFF
+   }
+Q8 Exaplain decendent selector in css: 
+
+   Decendent selector are used when any style to be applied to an element when the elemnet lised inside some element
+    for example {
+        ul em {  //  It will apply white colo into em inside ul 
+            color#FFFFF
+        }
+    }
+
+Q 9 Explain id selector in CSS:
+ Id selector is used to apply the style to an elemnet based on the id of an element
+
+
+  Ex : 
+
+       #elementid {
+        color: #FFFFFF;
+       }
+
+Q10 Expalin Class Selector in CSS:
+  Class selector is used to apply the style to an elemnetbased on the calss name of an element
+
+
+  for example: 
+
+     .elementClassName {
+        color: #FFFFF
+     }
+     
+Q11.

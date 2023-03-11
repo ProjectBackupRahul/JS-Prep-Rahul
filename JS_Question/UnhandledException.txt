@@ -1,0 +1,37 @@
+Approach 1: Using try-catch block: We know that Node.js is a platform built on JavaScript runtime for easily building fast and
+ scalable network applications. Being part of JavaScript, we know that the most prominent way to handle the exception is we can
+  have try and catch block.
+  try {
+	setTimeout(function() {
+		var err = new Error('Hello')
+		throw err
+	}, 1000)
+}
+catch (err) {
+	
+	// Example error won't be caught
+	// here... crashing our application
+	// hence the need for domains
+}
+
+Approach 2: Using Process: A good practice says, you should use Process to handle exception. 
+A process is a global object that provides information about the current Node.js process.
+ The process is a listener function that is always listening to the events.
+Few events are:
+
+Disconnect
+Exit
+Message
+Multiple Resolves
+Unhandled Exception
+Rejection Handled
+Uncaught Exception
+Warning
+The most effective and efficient approach is to use Process. 
+If any uncaught or unhandled exception occurs in your code flow, that exception will be caught in code shown below:
+process.on('uncaughtException', function(err) {
+
+	// Handle the error safely
+	console.log(err)
+})
+

@@ -1,0 +1,71 @@
+We have seen so far that React web apps are actually a collection of independent components that run according to the interactions
+ made with them. Every React Component has a lifecycle of its own,
+  lifecycle of a component can be defined as the series of methods that are invoked in different stages of the component’s existence. The definition is pretty straightforward but what do we mean by different stages? A React Component can go through four stages of its life as follows. 
+
+Initialization: This is the stage where the component is constructed with the given Props and default state. This is done in the constructor of a Component Class.
+
+Mounting: Mounting is the stage of rendering the JSX returned by the render method itself.
+
+Updating: Updating is the stage when the state of a component is updated and the application is repainted.
+
+Unmounting: As the name suggests Unmounting is the final step of the component lifecycle where the component is removed from the page.
+
+Intialization 
+  Set Props and Initial Sates of the component in the constructor
+
+  Mounting 
+
+  componentWillMount()
+    render()
+    componentDidMount()
+
+ Updation: 
+
+  for Props: ComponentWillReceiveProps()     ForSate : setSate()
+                          
+                          shoulComponentUpdate()
+                            true ()
+                          componentWillUpdate()
+                           
+                           render()
+
+                           componentDidUpdate()
+
+Unmounting : componnetWillMount()
+
+import React from 'react';
+class ComponentOne extends React.Component {
+
+// Defining the componentWillUnmount method
+componentWillUnmount() {
+	alert('The component is going to be unmounted');
+}
+
+render() {
+	return <h1>Hello Geeks!</h1>;
+}
+}
+
+class App extends React.Component {
+state = { display: true };
+delete = () => {
+	this.setState({ display: false });
+};
+
+render() {
+	let comp;
+	if (this.state.display) {
+	comp = <ComponentOne />;
+	}
+	return (
+	<div>
+		{comp}
+		<button onClick={this.delete}>
+		Delete the component
+		</button>
+	</div>
+	);
+}
+}
+
+export default App;

@@ -1,0 +1,9 @@
+40
+
+
+Amazon EC2
+
+Ec2 instance is enough to run a server,
+ S3 storage is not required to run a server its just for storing 
+ your resource which can also 
+ 

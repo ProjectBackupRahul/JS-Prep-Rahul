@@ -1,0 +1,99 @@
+Hyper text is the hyper text markup language for creating web pages. The
+HTML Element tell the browser how to display the content.
+An Html Element is defined by start tag some content and an end tag.
+
+
+
+Q 1 Html Tag vs Html element
+
+No Both are not same
+   HTML element are defined by a starting tag, may contain some content an a closing tag For example <h1>Heading one </h1> is a html element
+   element but just <h1> is a starting tag and </h1> is a closing tag .
+
+
+   Q2. Different types of list in HTML
+     There are 2 Type of List 
+        <h2>  unordered List </h2>
+
+          <ul>
+            <li>Animal 2 </li>
+            <li>Animal 2  </li>
+            <li>Animal 2  </li>
+          </ul>
+
+          <h2>  ordered List </h2>
+
+          <ol>
+            <li>Animal 2 </li>
+            <li>Animal 2  </li>
+            <li>Animal 2  </li>
+          </ol>
+
+  Q3.Difference between id and class attributes
+    multiple element in HTML can have the same class value, wehere as a value of id attribute of one element can Not be
+    associated with another elemnt.
+
+
+
+    Q4. What are the various Foramting tag in HTML
+    <b> - Makes text bold
+    <i> - makes text Italic
+    <em> - makes text italic but added semantic importance 
+    <big> - increase the font size of the text by one unit 
+    <small>-decrease the font size of the text by one unit
+    <sub>- makes the text a subscript
+    <sup>- makes the text a superscript
+    <del>- displays as stike out text
+    <strong> - makes the text as important
+    <mark>-Hightlight the text
+    <ins> displays as added text
+
+
+    Q5 . Significance of head and body tag
+
+         There cab be only 1 <head> tag in the entire Html document tag will always be before the <body> tag
+           <head> tag provide the imformation about the document It Should always be enclosed in the <html> tag. this tag
+           contains the meta data about the webpage and the tag which are enclosed by head tag  like <link>, <meta> <style>, <script>
+           etc are not dispalyed on the web page. This
+
+
+           <Body> tag defines the body of the HTML document. It should always be enclosed in the <html> tag. All the content 
+           which needs to be displayed on the web page like images, text, audio, video, contents using eleemt like <p>, <image>
+           <heading> , <div> etc.will always be enclosed by the <body> tag. also there can be only 1 body elemnet in an HTML
+           document ad will alwats be after the <head> tag.
+
+           <html>
+           <head>
+            <script>
+           </head>
+
+           </html>
+
+
+        Q6.  Link in HTML:
+           HTML provides a hyperlink <a> tag to specify the link in a webpage
+           the herf attribute is used to specify, where do we want to open the linked document
+
+           _self: this is the default value. It opens the document in the same window or tabs as it was clicked.
+           _blank: It opends the document in a new window or tab.
+           _parent: It open the document in parant frame.
+           _top: It opens the document in a full-body window.
+
+    How many ways we can specify CSS:
+       There are basically three ways to specify the CSS
+       Inline: Here we use the <style> Attribute inside the element
+
+       Internal: here we use the <style> tag inside the <head> Tag
+
+       External: Here we use the <link> tag inside <head> to reference the CSS file into our HTML code. Again the binding 
+        between elements and styles is doing using 'id' or 'class' attributes.
+
+        Q7. Inline and Block Element: 
+
+          Inline elements just takes up the space taht is absolutely necessary.
+          for the content and does not start from a new line
+           Ex: <span> <a> <strong> <img> <button> <em> <select> <abbr> <label> <sub> etc.
+
+           Block elements start on a new line and consume the full width of the page available
+           Example : <div> <p> <header> <footer> <h1> <h6> <from> <table> <cavas> <video> <blockquote> <pre> <ul> <ol> <figcaption> <figcaption> <figcaption> 
+           <figure> <hr> <article> <section> , etc 

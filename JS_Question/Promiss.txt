@@ -1,0 +1,99 @@
+Promises are used to handle asynchronous operations in JavaScript.
+ They are easy to manage when dealing with multiple asynchronous operations where callbacks can create callback hell leading to unmanageable code. 
+
+ Prior to promises events and callback functions were used but they had limited functionalities and created unmanageable code. 
+
+ Multiple callback functions would create callback hell that leads to unmanageable code. Also it is not easy for any user to handle multiple callbacks at the same time.
+
+ Events were not good at handling asynchronous operations.
+
+ Promises are the ideal choice for handling asynchronous operations in the simplest manner.
+  They can handle multiple asynchronous operations easily and provide better error handling than callbacks and events. 
+  In other words also, we may say that, promises are the ideal choice for handling multiple callbacks at the same time, thus avoiding the undesired callback hell situation. 
+  Promises do provide a better chance to a user to read the code in a more effective and efficient manner especially it that particular code is used for implementing multiple asynchronous operations. 
+
+  >>> Benefits of Promises 
+Improves Code Readability.
+Better handling of asynchronous operations.
+Better flow of control definition in asynchronous logic.
+Better Error Handling.
+
+
+>>> A Promise has four states: (FRPS)
+fulfilled: Action related to the promise succeeded
+rejected: Action related to the promise failed
+pending: Promise is still pending i.e. not fulfilled or rejected yet
+settled: Promise has fulfilled or rejected
+
+
+Example: Promise Resolved
+
+var promise = new Promise(function(resolve, reject) {
+	resolve('Resolved Message');
+})
+
+promise
+	.then(function(successMessage) {
+	//success handler function is invoked
+		console.log(successMessage);
+	}, function(errorMessage) {
+		console.log(errorMessage);
+	})
+=> O/P : Resolved Message 
+-------------------------------------------------------------------
+Examples: Promise Rejected 
+
+var promise = new Promise(function(resolve, reject) {
+	reject('Promise Rejected')
+})
+
+promise
+	.then(function(successMessage) {
+		console.log(successMessage);
+	}, function(errorMessage) {
+	//error handler function is invoked
+		console.log(errorMessage);
+	})
+O/P => Promise Rejected   
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+Promise.all(): 
+
+The Promise.all() method is actually a method of Promise object (which is also an object under JavaScript used to handle all the asynchronous operations), that takes an array of promises(an iterable) as an input.
+ It returns a single Promise that resolves when all of the promises passed as an iterable, which have resolved or when the iterable contains no promises.
+ In simple way, if any of the passed-in promises reject, the Promise.all() method asynchronously rejects the value of the promise that already rejected, whether or not the other promises have resolved. 
+
+
+Examples:
+
+ p1 = Promise.resolve(50);
+ p2 = 200
+ p3 = new Promise(function(resolve, reject) {
+     setTimeout(resolve, 100, 'geek');
+ });
+
+ Promise.all([p1, p2, p3]).then(function(values) {
+    console.log(values)
+ });
+
+
+ ----------------------------------------------------------------------------------------
+
+ Promise.allSettled()
+The Promise.allSettled() method takes an iterable of promises as input and returns a single Promise.
+This returned promise fulfills when all of the input's promises settle (including when an empty iterable is passed)
+ with an array of objects that describe the outcome of each promise.
+
+Example: 
+
+ const promise1 = Promise.resolve(3);
+const promise2 = new Promise((resolve, reject) => setTimeout(reject, 100, 'foo'));
+const promises = [promise1, promise2];
+
+Promise.allSettled(promises).
+  then((results) => results.forEach((result) => console.log(result.status)));
+
+// expected output:
+// "fulfilled"
+// "rejected"

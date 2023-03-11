@@ -1,0 +1,21 @@
+There’s a special syntax to work with promises in a more comfortable fashion, called “async/await”.
+ It’s surprisingly easy to understand and use.
+
+ async function f() {
+
+    let promise = new Promise((resolve, reject) => {
+      setTimeout(() => resolve("done!"), 1000)
+    });
+  
+    let result = await promise; // wait until the promise resolves (*)
+  
+    alert(result); // "done!"
+  }
+  
+  f();
+
+  (async () => {
+    let response = await fetch('/article/promise-chaining/user.json');
+    let user = await response.json();
+    
+  })();

@@ -1,0 +1,7 @@
+Flexbox is designed for one-dimensional layouts, and Grid for two-dimensional layouts.
+
+The approach of CSS Grid is the layout first, while the Flexbox approach is primarily the content.
+
+The Flexbox layout is best suited to application components and small-scale layouts, while the Grid layout is designed for 
+
+larger-scale layouts that are not linear in design.

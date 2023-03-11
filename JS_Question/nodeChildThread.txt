@@ -1,0 +1,51 @@
+How to handle Child Threads in Node.js ?
+
+Node.js is a single-threaded language and uses the multiple threads in the background for certain tasks as I/O calls but it does not expose child threads to the developer.
+
+But node.js gives us ways to work around if we really need to do some work parallelly to our main single thread process.
+
+Child Process in Node: The child_process module gives the node the ability to run the child process by accessing operating system commands.
+
+Example: Filename: parallelProcess.js
+
+// Do any work in parallel to main
+// event loop or main process
+console.log('Child Process Starts')
+setTimeout(() => {
+	console.log('Data processed')
+}, 5000)
+
+___________________________________________________________________________________________________________________________________________________
+Filename: main.js 
+
+
+const { fork } = require('child_process');
+
+// Fork another process
+const child_process = fork('./parallelProcess.js');
+
+// Data we may need to send to the child process    
+const data = {}
+
+console.log('Before process')
+
+// Send the data to forked process
+child_process.send({ data }, function(){
+	console.log('Sending data')
+});
+
+// Listen to forked process
+child_process.on('close', (result) => {
+	console.log('Child process terminated and returned');
+});
+
+console.log('After process')
+___________________________________________________________________________________________________________________________________________________
+
+OutPut 
+
+Before process
+After process
+Child Process Starts
+Data processed
+Child process terminated and returned

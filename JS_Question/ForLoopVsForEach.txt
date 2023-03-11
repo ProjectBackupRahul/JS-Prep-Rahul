@@ -1,0 +1,67 @@
+
+For loop
+
+It is one of the original ways of iterating over an array.
+It is faster in performance.	
+The break statement can be used to come out from the loop.	
+The parameters are the iterator, counter, and incrementor.	
+It works with the await keyword.	
+
+Example: 
+
+for (let i = 1; i <= 5; i++)
+{
+	console.log(i + "for array value");
+}
+
+
+
+
+For Each loop:
+
+It is a newer way with lesser code to iterate over an array.
+It is slower than the traditional loop in performance.
+The break statement cannot be used because of the callback function.
+The parameters are the iterator, index of item, and array to iterate.
+The await keyword cannot be used due to the callback function. It may lead to incorrect output.
+
+Example
+ numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach((number, index) => {
+	console.log('Index: ' + index +
+				', Value: ' + number);
+});
+
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+var arr = ["a" , "b" , "g" , "g", "a" , "g" , "g"] 
+
+// ag 4 + 2 = 6 
+// 02 , 03 , 05 , 06  , 45 , 46 
+  var cnt = [];
+  var n = ""
+  for (let i = 0 ; i< arr.length; i++ ){
+       
+      
+        if (arr[i] == "a"  ){
+             if ( n == "a")
+             {
+                 n = n+"" 
+             }
+             else {
+                    n = n + "a"
+             } 
+        }  for (let j = i ; j <arr.length ; j++){
+            if (arr[i] == "g"){
+                var local = n + "g"
+                cnt.push(local)
+        }
+        
+         
+         }
+  }
+ console.log(cnt)
+ console.log(cnt.length)
+

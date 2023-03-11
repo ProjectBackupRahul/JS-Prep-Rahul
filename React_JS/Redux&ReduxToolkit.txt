@@ -1,0 +1,12 @@
+App -> Home -> Blog
+
+We can pass the data from App componet to home to Blog componet || Reverse data parsing from blog to home can not be achiveable
+through redux & its sate mangement features we can do so.
+
+Store: All VariabLe data will be there it self 
+Reducer :I will allow us to cahnge the state of the data.
+Example :Let say  State of C is 20;
+          Now if can write a function from reducer the cal the state and cahnge sate to like: C =40;
+
+Action: By help of the action we can triggerout the reducer, so that it can change or manipulate the redux state !! 
+   

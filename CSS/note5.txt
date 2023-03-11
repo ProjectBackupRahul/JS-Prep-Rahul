@@ -1,0 +1,24 @@
+Q19. Diffent Between dispaly and visibility ;
+
+dispaly:none; || sapce is alocated 
+
+visibility: hidden || will not appre at all 
+
+Q20. 
+
+Diffence Between CSS and SCSS ?
+
+CSS:Css Stand for cascading Style Sheet is the Basically the scripting language. CSS is used for designing web pages. CSS is the
+most important web technolies that are widely used along with HTML and Javascript. CSS having file extension od .css
+
+SCSS: Syntactically Awesome Style Sheet is the superset of CSS. SCSS is the the More advanced version of CSS. SCSS was designed by
+Hampton Catlin and was developed by Chris Eppatein and Natalie Weizenbaum. Due to advanced featureis often termend as Sassy CSS. 
+SCSS have the file extension .SCSS 
+
+ || Features: Yes It's contains all features of CSS but having some extra feature than that as well: 
+
+  Like varibale decaling 
+
+  Sass add the fature of @import which lets you import your customize SCSS 
+
+  Knowing SCSS helps you to Customize Bootstrap4 

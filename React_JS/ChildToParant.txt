@@ -1,0 +1,1 @@
+using event we can pass the data. Child to parant 

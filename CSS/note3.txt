@@ -1,0 +1,39 @@
+Q12. Is it possible to make a class selector for a particular element ? If so how ?
+
+Yes we can make a class selector for a particular element 
+
+Below is the example for the same
+
+h2.myelementClassName{
+    color: #FFFFF
+}
+
+Q13 How to use external style sheets
+
+ External style sheet will be used to refer the style information from the external file
+
+ In HTML Document this can be used to refer in the head <HEAD> section like below 
+
+ <head>
+ <link rel = "stylesheet" href="mySheet.css", type "text/css">
+
+ </head>
+
+ Q13 Exaplin Attribute Selector in CSS
+
+  Attribute Selector can be used to apply a style for an HTML elelment with particular attribute
+  
+  Expalin given below is used to apply a style for inputs element particular attribute text file
+
+  input [type = "text"]{
+     color: #FFFFF
+  }
+
+  Q14. Is css is case sensitive or Insensitive ?
+
+    CSS is case insensetive.
+    
+  Q15. Which property will be used for changing the face of font in css ?
+
+      Font Family can be used for cahnging the face of Font.
+

@@ -1,0 +1,34 @@
+Q1 What is css : CSS Stands for cascading style sheet use for applying the style fro the html element.
+
+Q2 Cascading means that cascading order of HTML document. For example
+    This will sort of declare css in an order to avoid the conflict with
+
+Q3 Waht are the different types of CSS?
+   Below are the different type of CSS 
+     > Embedded : Adding the css styles in style attribute to the
+     > Inline : Adding the css to the HTML element
+     > Linked/ External: Adding the External CSS files to the HTML Document 
+
+Q4 Advatages of CSS
+
+> Accessiblity
+> Multiuple Device comaptability
+> Lastrer Load of page
+> Easy to maintain
+> Offline browsing 
+
+Q5 list out the components of CSS style
+
+ > Pproperty
+ > Selector
+ > Value
+ 
+ Q6 Exlapain the type selector in CSS
+
+    Type selector Matches the element of specific types.
+
+    To give the color for all inputs with text types, we can do like this.
+
+    input[type="text"] {
+        color:#b2bfc7
+    }

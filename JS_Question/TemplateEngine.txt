@@ -1,0 +1,14 @@
+A fast and lightweight HTML-based templating engine that compiles templates to CommonJS modules and supports streaming, 
+async rendering and custom tags.
+
+Pug: Haml-inspired template engine (formerly Jade).
+Haml.js: Haml implementation.
+EJS: Embedded JavaScript template engine.
+hbs: Adapter for Handlebars.js, an extension of Mustache.js template engine.
+Squirrelly: Blazing-fast template engine that supports partials, helpers, custom tags, filters, and caching. Not white-space sensitive, works with any language.
+Eta: Super-fast lightweight embedded JS template engine. Supports custom delimiters, async, whitespace control, partials, caching, plugins.
+combyne.js: A template engine that hopefully works the way you’d expect.
+Nunjucks: Inspired by jinja/twig.
+marko: A fast and lightweight HTML-based templating engine that compiles templates to CommonJS modules and supports streaming, async rendering and custom tags. (Renders directly to the HTTP response stream).
+whiskers: Small, fast, mustachioed.
+Blade: HTML Template Compiler, inspired by Jade & Haml.

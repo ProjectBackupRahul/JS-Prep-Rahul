@@ -1,0 +1,64 @@
+Step 1 : create react application In your local branch.
+Step 2 : Create a git repository for the same application in gitHub.
+Step 3 : Create a S3 buckect respect to your AWS account  || By Providing Bucket name Region 
+Step 4 : Go to the s3 bucket properties -> Enable static web hosting 
+Step 5 : Index Document is index.html || Error document(optional)  index.html
+// Bucket Name : cicd-work-demo-rahul
+
+Step 6: Inside Permission -> Enable block all public access || needs to uncheck all -> save -> confirm 
+Step 7 : Cahnge the bucket policy-> edit bucket policy script - Save Cahnges
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::YOUR_S3_BUCKET_HERE/*"
+        }
+    ]
+}
+Step 8 : Cahnge the CORS configuration as well -> save Changes 
+
+[
+    {
+        "AllowedHeaders": [
+            "*"
+        ],
+        "AllowedMethods": [
+            "POST",
+            "GET",
+            "PUT" 
+        ],
+
+        "AllowedOrigins": [
+            "*"
+        ]
+    }
+]
+
+ Step 9 : Now we needs create code pipeline : provide anme for the code pipe line 
+ Step 10 : Chose a Source provider gitHub -> Connect to github -> chose a repositorty 
+ Step 11 : Build Provider -> Aws Defaul buuild
+ Step 12 : Create build -> Project name -> Description -> Chose a oparating system -> Runtime Standared 
+ Step 13 : Create enviorment -> Image satndared -> Amazon Linux Standared 3.0
+ Step 14 : Create a Buildspec -> Use a build Spec file(Required a YAML file) -> Create Build Spec
+ Step 15 : Add Deploy Stage: Aws S3 -> Chose your Bucket -> Exttract file before deploy -. Preview your
+ Step 16 : Add the bulid YAML script in your Repository 
+
+ version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - npm install
+  build:
+    commands:
+      - npm run build
+
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: no
+  base-directory: build

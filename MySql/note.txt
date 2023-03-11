@@ -1,0 +1,7 @@
+-l/VjNC>x1H%  //  Temporary password 
+
+root: 
+
+ userid : root
+ password: Mampa@2609
+ 

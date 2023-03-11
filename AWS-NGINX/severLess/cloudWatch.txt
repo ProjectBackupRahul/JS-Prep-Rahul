@@ -1,0 +1,2 @@
+CloudWatch helps you to monitor AWS environments like EC2, RDS Instances, 
+and CPU utilization. It also triggers alarms depending on various metrics.

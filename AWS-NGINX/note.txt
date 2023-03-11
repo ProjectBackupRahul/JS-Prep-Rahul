@@ -1,0 +1,108 @@
+create a api gate way
+API gateway having 4 type of API gate way like 
+   Socket API gateaway 
+   HTTP API gateway 
+   REST API gateway -Private 
+   Rest API gateway - Public 
+
+   Needs create lamda function to cominicate with you API gateway 
+
+   Lamda -> create Lamda Function > function name > Runtime > 
+
+   lamda to create some role > 
+    3  option you can find out
+    1. Create a role 
+    2. chose a existing role
+    3.  create basic role with Lamda Permission
+
+    Next give the permission to the role to acess Dynamodb to acess the dynamo db like
+
+    full permission to access the DynamoDB & Cloud watch to provide attachment policies.
+
+    || Now you put the lamda function name inside api gateway filed 
+
+    || Now you can create all you API method Like GET POST PUT DELETE PATCH
+
+    || Note : Please make sure Use Lamda proxy Integration 
+
+
+    || Note after finishing creation of the application you needs to deploy your application 
+
+     from deploy API > Deploy Stage 
+       > If yo don't have any stage you can create a create deployment stage .
+
+          stage name - Dev 
+          Stage Description - dev 
+          Deployment description - dev 
+
+
+          After finishing of the Deployment you wil get the backend API urls 
+
+          After changing the in the Lamda function the all the you have to deploy the lamda 
+
+          if something is not working for you just go and create test event & save the same 
+
+    || Now configuring the dynamo db by supply the partision key and type of the key. 
+
+    ||  then create table 
+
+    const AWS = require ("aws-sdk");
+    AWS.config.update({
+        region: 'ap-northeast-1'
+    })
+    
+     const dynamoDBTable = 'users';
+     const dynamoDB = new AWS.DynamoDB.DocumentClient();
+     const userPath = '/users'
+     
+    exports.handler = async (event) => {
+          let response;
+          console.log(event)
+          
+          switch(event.httpMethod){
+              case 'POST':
+                  response = await saveUser(JSON.parse(event.body))
+                  break;
+           
+                  case 'GET':
+                      response = await getUsers();
+                      break;
+                  default:
+                 response = buildResponse(404, '404 not Found')
+          }
+           return response
+    };
+    async function getUsers() => {
+        const params =  [
+            TableName: dynamoDBTable
+            ]
+             const allUsers = await dynamoDB.scan(params).promise();
+    }
+    
+    async function  saveUser(requestBody) {
+         const params  = {
+             TableName : dynamoDBTable,
+             item: requestBody
+         }
+          return await dynamoDB.put(params).promise().then(()=>{
+              const body = {
+                  Operation : 'SAVE',
+                  Message : 'SUCCESS',
+                  Item: requestBody
+              }
+              return buildResponse(200, body)
+          }, (error)=>{
+              console.log(error)
+          })
+    }
+    
+    function buildResponse (statusCode, body){
+        return {
+            statusCode: statusCode,
+            headers: {
+                'Content-Type': 'application/json' 
+            },
+            body: JSON.stringify(body)
+        }
+    }
+    

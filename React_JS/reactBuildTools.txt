@@ -1,0 +1,18 @@
+4. Storybook
+If you are looking for rapid iteration & testing of UI components, then the storybook is an ideal option to consider. 
+It aids you to visualize various states of each component of your applications.
+ The storybook ensures better testing of the UI interactions.
+
+As this visualization and testing are under an isolated environment, 
+you no need to worry about breaking something while tweaking your components.
+ The main concept of the storybook react tool is creating stories that represent the behavior of each component. 
+ For instance, you can create a story for the current state of a button, active button or default button.
+  It fits well with your existing testing workflow and integrates with testing tools like Enzyme and Jest.
+   It eases the doing snapshot and interaction test with the components.
+
+Features of Storybook
+
+Faster setup & configuration
+Deliver robust UIs
+Build components in isolation
+Add-ons for rapid UI building

@@ -1,0 +1,6 @@
+VPC stands for Virtual Private Cloud. It allows you to customize your
+ networking configuration. VPC is a network that is logically isolated 
+ from other networks in the cloud. 
+ It allows you to have your private IP Address range, internet gateways,
+  subnets, and security groups.
+

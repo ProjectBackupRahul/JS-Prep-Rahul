@@ -1,0 +1,26 @@
+Q16. How to use groupping In CSS ?/
+Grouping is mainly used for appling CSS style for Multiple HTML elements and this can be done with in single declaration.
+
+Examples
+
+  h2,h3 {
+    color : #fffff
+  }
+Q17. Expalin Chlid selector in CSS
+  Child selector can be used for applying the style for the parant element and this will descend to the child elements.
+
+  Below is example:
+
+     body > inputs {
+        color #fffff;
+     }
+
+Q18. What is the use of float property in css 
+
+  Float property is used to allow an  HTML Element to be Positioned Horizontally.
+  float property can take the values either "left", "right"
+  for Example
+
+   h1, h2 {
+      float: right;
+   }

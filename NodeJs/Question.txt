@@ -1,0 +1,88 @@
+Basic Node JS Developer Interview Questions for Freshers
+We start with some basic conceptual Node JS Developer interview questions you should be able to answer before we move ahead. Can you answer them?
+
+Define and describe the usage of the following in the context of Node JS:
+
+Event Emitter
+Error-first callback
+Callback hell
+WASI
+Reactor pattern 
+Buffer class
+Timing features 
+Test pyramid
+ Package.json file
+ Reactor Pattern
+ Event Loop 
+ Global installation of dependencies
+ NODE_ENV
+ LTS releases 
+ Piping
+Event-driven programming
+ Streams 
+ Middleware
+ The module .Exports
+ Express.js package
+ REPL
+Punycode
+First class functions
+Fork
+Asynchronous API
+NPM
+
+Intermediate Node JS Developer Interview Questions For 2 Year Experience
+Let’s move a step further with some intermediate Node JS Developer interview questions for experienced professionals:
+
+Explain the web application architecture of Node.js.
+Expand on the types of API functions available in Node.js.
+What is usually the first argument passed to a Node.js callback handler?
+Name some tools that help ensure consistent code style.
+Expand on the various modules in Node.js.
+Explain callback hell along with ways to avoid it.
+Why is Node.js preferred over Java, PHP, and other backend technologies?
+Explain the various types of HTTP requests.
+How can we manage packages in a Node.js project.
+State the advantages of using promises overusing callbacks.
+Name and explain some of the flags used in file read/write operations.
+Talk a bit about asynchronous, non-blocking APIs in Node.js.
+ Differentiate between the global and local installation of dependencies.
+How would you create a simple server in Node.js that returns Hello World?
+How would you create a simple Express.js application?
+How would you install, update, and delete a dependency?
+What does an EventEmitter do in Node.js?
+Differentiate between readFile and createReadStream.
+What does the TTY module in Node.js contain?
+ Differentiate between JavaScript, Angular, Ajax, and Node.js.
+What is node js and what does it do? How would you install and update node js?
+Does Node.js supports cryptography?
+What does assert do in Node.js?
+What does the control flow function do and how does it work?
+Does Node.js come with a debugger?
+What are the advantages and disadvantages of Node.js?
+Can we access DOM in Node?
+Name some of the most commonly used libraries in Node.js.
+What kind of tasks we can do asynchronously using the event loop?
+Name the command used to import external libraries.
+Is evaluation of simple expressions possible using Node REPL?
+Why is Node.js Single-threaded?
+Which tool would you use to ensure consistent code style in Node.js?
+What purpose does the underscore variable serve in REPL?
+
+Advanced Node JS Senior Developer Interview Questions for 3-5 Years Experience
+Lastly, here are some advanced Senior Node JS Developer interview questions. Ensure you can solve them before your interview:
+
+How does Node prevent blocking code?
+Why does Google use the V8 engine for Node.js?
+How does Node.js handle concurrency, given it’s single-threaded?
+How does Node.js support multi-processor platforms?
+Does Node.js fully utilize all processor resources? If yes, how?
+Why do we need to separate the Express app and server?
+Explain config file separation for dev and prod environments via an example.
+Describe how to use a URL module in Node.js.
+Differentiate between process.nextTick() and setImmediate().
+Differentiate between fork() and spawn() methods in Node.js.
+Differentiate between Angular and Node.js.
+What method would you prefer for resolving unhandled exceptions in Node.js?
+How would you implement async in Node.js? Explain the use of async await using an example.
+How does clustering improve the performance in Node.js?
+How does the threadpool work and which library in Node.js takes care of it?

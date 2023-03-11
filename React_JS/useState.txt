@@ -1,0 +1,72 @@
+Hooks: 
+
+What is a Hook? 
+
+It's been introduced in 
+
+A Hook is a special function that lets you “hook into” React features. For example, 
+useState is a Hook that lets you add React state to function components. We’ll learn other Hooks later.
+
+When would I use a Hook?
+
+ If you write a function component and realize you need to add some state to it, previously you had to convert it to a class. 
+ Now you can use a Hook inside the existing function component. We’re going to do that right now!
+
+We can Categorise Hooks as follows: 
+
+  1. Basic Hooks
+
+    [] useSate 
+    [] useEffect
+    [] useContext
+
+  2. Additional Hooks
+     [] useReducer 
+     [] useCallback
+     [] useMeno 
+     [] useRef 
+     [] useImperativeHandle 
+     [] uselayoutEffect
+     [] useDebugValue
+
+     SomeAdditional Hooks: 
+
+        Routing Hooks: (For Browser Related )
+        [] useParams
+        [] useHistory 
+        [] useLocation 
+
+    Redux Hooks:  (For Redux)
+
+       [] useSelector
+       [] useDispatcher 
+----------------------------------------------------------------------------------------------------------------------------------------
+
+       // There is a limitation In useState Hook :
+        Like we can make the usaeState Hook as conditional
+        || Can not use inside if else condition Hook
+        || Can not use inside for loop
+        || can not use inside the function
+
+
+
+       Example: 
+
+       import React, { useState } from 'react';
+       function test () {
+        const [count, setCount ] = useState(0);
+
+        function increment () {
+          setCount(count + 1)
+        }
+          function decrement () {
+            setCount(count - 1)
+          }
+
+
+           return (
+               <div>
+                   <button onClick={increment}> +</button> {count} <button onClick={decrement}> -</button>
+               </div>
+           )
+       }

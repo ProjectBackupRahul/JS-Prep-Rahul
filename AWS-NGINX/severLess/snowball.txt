@@ -1,0 +1,2 @@
+SnowBall is a small application that enables you to transfer terabytes of
+ data inside and outside of the AWS environment.

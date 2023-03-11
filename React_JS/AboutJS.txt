@@ -1,0 +1,3 @@
+Javascript is the synchronous single-threaded language but with the help of event-loop and 
+promises, JavaScript is used to do asynchronous programming. In this article, we discussed 
+synchronous vs asynchronous javascript with the help of coding examples.14-Nov-202

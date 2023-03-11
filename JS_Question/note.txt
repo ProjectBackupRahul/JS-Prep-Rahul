@@ -1,0 +1,20 @@
+ !! Everything in js happens inside "execution context"
+  inside the execution context there are two no. of componets exists : 
+  1. Memory Component also know as variable component [ values are stored in a key value pair format]
+  2. Code compent , here each code are execeuted line by line "the componet also known as thread of execution"
+
+  !! javascript is a synchronous single threaded Language.
+     That means javascript executes a single command at time that also ben executed in a manner(Line one by one like)
+
+  !!  IN JS When-ever we run a code a global execution context is cyreated [ With two componet : Like Memory componet & Code componet ]
+       The execution componet is created in two phases
+        1st phase is know as memory creation phase.
+        it will allowed a the memory for the javascript veriable and functios of the
+         ex: var n = 2;  || Initially the memory allocate an undefined value for the variable.
+         funtion square (num) {
+              var ans = num*num;
+              return ans;
+         }
+
+           var square1 = square(4);
+           

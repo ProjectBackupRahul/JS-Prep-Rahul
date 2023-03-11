@@ -1,0 +1,34 @@
+Node.js Event Loop:
+
+Node.js is a single-threaded event-driven platform that is capable of running non-blocking, asynchronously programming.
+These functionalities of Node.js make it memory efficient.
+The event loop allows Node.js to perform non-blocking I/O operations despite the fact that JavaScript is single-threaded.
+It is done by assigning operations to the operating system whenever and wherever possible.
+
+Most operating systems are multi-threaded and hence can handle multiple operations executing in the background. 
+When one of these operations is completed, the kernel tells Node.js and the respective callback assigned to that operation is added to the event queue which will eventually be executed. 
+This will be explained further in detail later in this topic.
+
+Features of Event Loop:
+
+> Event loop is an endless loop, which waits for tasks, executes them and then sleeps until it receives more tasks.
+> The event loop executes tasks from the event queue only when the call stack is empty i.e. there is no ongoing task.
+> The event loop allows us to use callbacks and promises.
+> The event loop executes the tasks starting from the oldest first.
+
+Example:
+
+
+console.log("This is the first statement");
+   
+setTimeout(function(){
+    console.log("This is the second statement");
+}, 1000);
+   
+console.log("This is the third statement"); 
+
+Output:
+
+This is the first statement
+This is the third statement
+This is the second statement

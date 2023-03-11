@@ -1,0 +1,70 @@
+There are four main types of streams in Node. js;
+1. readable
+2. writable, 
+3. duplex,
+4. transform. 
+
+Writable: We can write data to these streams. Example: fs.createWriteStream().
+Readable: We can read data from these streams. Example: fs.createReadStream().
+Duplex: Streams that are both, Writable as well as Readable. Example: net.socket.
+Transform: Streams that can modify or transform the data as it is written and read. Example: zlib.createDeflate.
+___________________________________________________________________________________________________________________________________________________
+
+// Sample JavaScript Code for creating
+// a Readable Stream
+// Accessing streams
+const { Readable } = require('stream');
+  
+// Reading the data 
+const inStream = new Readable({
+    read() { }
+});
+  
+// Pushing the data to the stream
+inStream.push('GeeksForGeeks : ');
+inStream.push(
+    'A Computer Science portal for Geeks');
+  
+// Indicates that no more data is
+// left in the stream
+inStream.push(null);
+  
+// Echoing data to the standard output
+inStream.pipe(process.stdout);
+
+Output:
+
+GeeksForGeeks : A Computer Science portal for Geeks 
+
+___________________________________________________________________________________________________________________________________________________
+
+// Sample JavaScript Code for
+// Writable Stream
+// Accessing Streams
+const { Writable } = require('stream');
+
+// Whatever is passed in standard
+// input is out streamed here.
+const outStream = new Writable({
+
+	// The Write function takes three
+	// arguments
+	// Chunk is for Buffer
+	// Encoding is used in case we want
+	// to configure the stream differently
+	// In this sample code, Encoding is ignored
+	// callback is used to indicate
+	// successful execution
+	write(chunk, encoding, callback) {
+		console.log(chunk.toString());
+		callback();
+	}
+
+});
+
+// Echo the data to the standard output
+process.stdin.pipe(outStream);
+
+Output:
+
+Hello Geeks 

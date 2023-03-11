@@ -1,0 +1,20 @@
+Let us see the differences in a tabular form -:
+
+process.nextTick()	setImmediate()
+1.	process.nextTick() is used to schedule a callback function to be invoked in the next iteration of the Event Loop.
+	setImmediate() method is used to execute a function right after the current event loop finishes.
+2.	Its benefit is that it has no time bound to take a callback.	
+setImmediate() method is only processed on the check handler phase of the event loop
+3.	process.nextTick() function is specific to the Node.js Event Loop	
+It is generally found in the Timers module
+4.	
+Its syntax is -:
+
+process.nextTick(callback);
+
+Its syntax is -:
+
+setImmediate(callback);
+
+5.	It has a benefit that it has the potential to cause I/O starvation
+	Its return value is a unique timer identifier that can be used in another function call.
