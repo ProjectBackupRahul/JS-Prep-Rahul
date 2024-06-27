@@ -1,6 +1,9 @@
 
-Debouncing is a programming pattern used to ensure that a function is executed only after a specified time has elapsed since the last time it was invoked. 
-This is particularly useful for optimizing performance in scenarios where a function could be called frequently, such as during window resizing, scrolling, or keystrokes in a text input.
+Debouncing is a programming pattern used to ensure that a function is executed 
+only after a specified time has elapsed since the last time it was invoked. 
+This is particularly useful for optimizing performance 
+in scenarios where a function could be called frequently, 
+such as during window resizing, scrolling, or keystrokes in a text input.
 
 Key Concepts of Debouncing
 Prevents Repeated Execution: Ensures a function isn't executed multiple times in quick succession.

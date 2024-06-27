@@ -1,6 +1,7 @@
 Overview of the Event Loop
 Node.js is built on the libuv library, which provides the event loop mechanism and facilitates asynchronous I/O operations. 
-The event loop continuously checks for pending events, executes callback functions, and processes tasks, enabling Node.js to handle numerous operations without blocking the execution thread.
+The event loop continuously checks for pending events, executes callback functions, and processes tasks, enabling Node.js 
+to handle numerous operations without blocking the execution thread.
 
 Phases of the Event Loop
 The event loop consists of several phases, each with its own specific tasks. These phases are:

@@ -1,0 +1,13 @@
+Debugging a Deployed Lambda Function from Local VS Code Setup
+Prerequisites
+AWS CDK installed: Ensure AWS CDK is installed.
+Node.js and npm installed: Make sure Node.js and npm are installed.
+AWS CLI configured: Ensure your AWS CLI is configured with appropriate permissions.
+AWS Toolkit for VS Code: Install the AWS Toolkit extension in VS Code.
+
+1. Set Up Local Environment
+Create and Configure CDK Project
+Ensure you have a CDK project and Lambda function as described in the previous sections. Your Lambda handler should be in a file, for example, lambda/index.ts.
+
+2. Install Dependencies
+Ensure you have all necessary dependencies installed for local developme

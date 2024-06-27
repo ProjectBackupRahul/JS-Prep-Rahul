@@ -1,0 +1,18 @@
+AWS Step Functions is a serverless orchestration service that lets you build and manage multi-step workflows using
+state machines. 
+AWS Step Functions helps you coordinate the components of distributed applications and microservices using visual workflows.
+
+This guide will walk you through creating and managing AWS Step Functions using AWS CDK in TypeScript.
+
+Overview of AWS Step Functions
+Key Features
+Visual Workflow: Define workflows visually using a JSON-based Amazon States Language (ASL).
+Integration: Easily integrate with other AWS services like Lambda, ECS, DynamoDB, and more.
+Error Handling: Built-in error handling and retry logic.
+Monitoring: Integrated with Amazon CloudWatch for logging and monitoring.
+
+Common Use Cases
+Data Processing Pipelines: Orchestrate data transformation and analysis tasks.
+Microservice Coordination: Coordinate multiple microservices in a complex workflow.
+IT Automation: Automate repetitive IT tasks and maintenance operations.
+Business Process Management: Model and automate business workflows and decision-making processes.

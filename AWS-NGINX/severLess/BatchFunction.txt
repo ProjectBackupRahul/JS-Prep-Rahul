@@ -1,0 +1,10 @@
+Creating a batch processing function using AWS Lambda and AWS CDK (in TypeScript) involves several steps.
+ AWS Lambda can process batches of records from sources like Amazon S3, DynamoDB Streams, Kinesis Streams, or SQS. Below, 
+ I’ll provide a guide to setting up a batch processing Lambda function triggered by an Amazon SQS queue using AWS CDK in TypeScript.
+
+Setting Up Batch Processing with AWS Lambda and SQS in AWS CDK
+Prerequisites
+AWS CDK installed: Ensure AWS CDK is installed.
+Node.js and npm installed: Make sure Node.js and npm are installed.
+AWS CLI configured: Ensure AWS CLI is configured with appropriate permissions.
+1. Create a New CDK Project

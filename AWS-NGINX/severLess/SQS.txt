@@ -1,0 +1,42 @@
+
+Amazon Simple Queue Service (SQS) is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems,
+ and serverless applications. SQS helps to ensure that your messages are processed in a reliable and ordered manner.
+
+Here's an overview of SQS, its types, use cases, and integration with AWS Lambda and AWS CDK in TypeScript.
+
+Overview of Amazon SQS
+Types of SQS Queues
+Standard Queues:
+
+Unlimited Throughput: Nearly unlimited number of transactions per second.
+At-Least-Once Delivery: Messages are delivered at least once, but might be delivered multiple times.
+Best-Effort Ordering: Messages are generally delivered in the same order they are sent.
+
+
+FIFO Queues (First-In-First-Out):
+
+Order Guarantee: Ensures messages are processed exactly once, in the precise order they are sent.
+Limited Throughput: Limited to 300 transactions per second (TPS), which can be increased to 3,000 TPS with batching.
+
+Key Features
+Scalability: Scales to handle a virtually unlimited number of messages.
+Reliability: Guarantees message delivery and order (FIFO).
+Security: Integrates with AWS Identity and Access Management (IAM) for access control.
+Cost-Effectiveness: Pay only for what you use.
+Common Use Cases
+
+Decoupling Microservices: Allows independent services to communicate asynchronously.
+Work Queues: Distribute workload across multiple workers.
+Buffering Requests: Manage the rate of incoming requests and offload processing to background workers.
+Event Sourcing: Track changes in state over time.
+Integrating SQS with Lambda
+You can configure an SQS queue to trigger an AWS Lambda function when new messages are available. This is useful for processing messages asynchronously.
+
+Setting Up SQS to Lambda Integration
+Create an SQS Queue: Create an SQS queue via AWS Management Console, AWS CLI, or CDK.
+
+Create a Lambda Function: Define a Lambda function that processes messages from the SQS queue.
+
+Grant Permissions: Ensure the Lambda function has permissions to read messages from the SQS queue.
+
+Configure Event Source Mapping: Set up the event source mapping so the Lambda function is invoked whenever a new message is sent to the SQS queue.

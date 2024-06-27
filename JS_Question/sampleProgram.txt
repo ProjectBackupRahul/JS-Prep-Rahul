@@ -1,0 +1,38 @@
+const data = {
+  "employees": [
+    {
+      "id": 1,
+      "name": "Alice",
+      "skills": ["JavaScript", "React", "Node.js"]
+    },
+    {
+      "id": 2,
+      "name": "Bob",
+      "skills": ["Python", "Django", "SQL"]
+    },
+    {
+      "id": 3,
+      "name": "Charlie",
+      "skills": ["Java", "Spring", "MySQL"]
+    }
+  ]
+};
+
+function getEmployeesBySkill(skillName) {
+  const matchingEmployees = [];
+  
+  // Iterate through each employee
+  data.employees.forEach(employee => {
+    // Check if the employee has the specified skill
+    if (employee.skills.includes(skillName)) {
+      matchingEmployees.push(employee.name);
+    }
+  });
+  
+  return matchingEmployees;
+}
+
+// Example usage
+const skillName = "Java";
+const employeesWithSkill = getEmployeesBySkill(skillName);
+console.log(`Employees with skill "${skillName}":`, employeesWithSkill);
