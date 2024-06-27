@@ -1,0 +1,20 @@
+AWS Lambda provides various configurations to optimize function performance, including setting the memory allocation. 
+The memory setting affects not just the RAM but also the CPU power available to your function, which influences execution time and cost.
+
+Here's a detailed overview of managing and understanding memory configuration for Lambda functions:
+
+AWS Lambda Memory Configuration
+Memory and CPU Relationship
+Memory Allocation: Ranges from 128 MB to 10,240 MB (10 GB), in 1 MB increments.
+CPU Allocation: CPU power scales linearly with memory. More memory means more CPU power, which can reduce execution time.
+Configuring Memory Allocation
+You can set or update the memory for a Lambda function using various methods: AWS Management Console, AWS CLI, AWS SDK, or AWS CDK.
+
+Setting Memory Using AWS Management Console
+Go to the Lambda Console: AWS Lambda Console.
+Select Your Function: Click on the function you want to configure.
+Edit Configuration: Under the Configuration tab, select General configuration.
+Memory: Adjust the memory slider or enter the desired memory value.
+Save: Click Save to apply the changes.
+Setting Memory Using AWS CLI
+To update memory using the AWS CLI:

@@ -57,6 +57,6 @@ app.get("/user/validateToken", (req, res) => {
 	}
 });
 
-JWT should be stored in cookies. You can use httponly and secure flags depending on your requirements.
+JWT should be stored in cookies. You can use http only and secure flags depending on your requirements.
  To protect from CSRF samesite cookie attribute can be set to strict if it generally fits your application - 
  it will prevent logged-in users of your site to follow any link to your site from any other site.

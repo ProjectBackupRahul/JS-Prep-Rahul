@@ -1,13 +1,16 @@
-Closure means that an inner function always has access to the vars and parameters of its outer function,
- even after the outer function has returned.
- 
- function OuterFunction() {
+A closure is created when a function is defined within another
+ function and it retains access to the variables of the outer function, 
+even after the outer function has returned.
 
-    var outerVariable = 1;
+function outerFunction() {
+    let outerVariable = 'I am from the outer scope';
 
-    function InnerFunction() {
-        alert(outerVariable);
+    function innerFunction() {
+        console.log(outerVariable); // Accesses outerVariable
     }
 
-    InnerFunction();
+    return innerFunction;
 }
+
+const closureFunction = outerFunction();    
+closureFunction(); // Logs: I am from the outer scope

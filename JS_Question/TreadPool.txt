@@ -6,5 +6,18 @@ without blocking its main thread.
 Example of Theard pool Lib: 
 
  npm libuv:
+Node.js uses a thread pool model to handle certain types of tasks that are computationally expensive or involve asynchronous I/O operations. Understanding how Node.js manages threads can help developers write more efficient and scalable applications.
 
+Overview of Thread Pool in Node.js
+Node.js runs JavaScript code on a single thread using the Event Loop for asynchronous operations. However, some operations (like file system operations, DNS lookups, and certain cryptographic functions) require significant CPU or I/O resources. For these, Node.js utilizes a thread pool, typically provided by libuv (the underlying library that handles the Event Loop and thread pool).
+
+Key Concepts
+Single-threaded Event Loop: JavaScript code execution and asynchronous operations like I/O and networking are managed by a single-threaded event loop.
+Thread Pool: Node.js uses a thread pool to offload expensive operations that can't be handled by the non-blocking Event Loop alone.
+Understanding the Thread Pool
+The thread pool is used for:
+
+File system operations: Like reading and writing files.
+DNS resolution: Performing DNS lookups.
+Compression and Decompression: Handling zlib operations.
 

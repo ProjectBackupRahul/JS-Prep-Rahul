@@ -1,6 +1,15 @@
-A deep copying means that value of the new variable is disconnected from 
-the original variable while a shallow copy means that
- some values are still connected to the original variable.
+Shallow Copy:
+
+Copies only the outer object.
+Nested objects are not copied but referenced.
+Use Object.assign(), the spread operator (...), or array methods like slice() and concat().
+Suitable for simple objects or when you only need to copy the first level of properties.
+Deep Copy:
+
+Copies the outer object and all nested objects recursively.
+Creates entirely new objects for all nested levels.
+Use JSON.stringify() / JSON.parse(), a recursive function, or libraries like Lodash.
+Necessary when the object contains nested objects and you need a completely independent copy.
 
 let person = {
     firstName: 'John',

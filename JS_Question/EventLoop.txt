@@ -1,13 +1,48 @@
-Node.js Event Loop:
+Overview of the Event Loop
+Node.js is built on the libuv library, which provides the event loop mechanism and facilitates asynchronous I/O operations. 
+The event loop continuously checks for pending events, executes callback functions, and processes tasks, enabling Node.js to handle numerous operations without blocking the execution thread.
 
-Node.js is a single-threaded event-driven platform that is capable of running non-blocking, asynchronously programming.
-These functionalities of Node.js make it memory efficient.
-The event loop allows Node.js to perform non-blocking I/O operations despite the fact that JavaScript is single-threaded.
-It is done by assigning operations to the operating system whenever and wherever possible.
+Phases of the Event Loop
+The event loop consists of several phases, each with its own specific tasks. These phases are:
 
-Most operating systems are multi-threaded and hence can handle multiple operations executing in the background. 
-When one of these operations is completed, the kernel tells Node.js and the respective callback assigned to that operation is added to the event queue which will eventually be executed. 
-This will be explained further in detail later in this topic.
+Timers
+
+Purpose: Executes callbacks scheduled by setTimeout() and setInterval().
+Behavior: If the time threshold for a timer has been reached, its callback is executed.
+Details: setTimeout() and setInterval() callbacks are queued here if their scheduled time has elapsed.
+I/O Callbacks
+
+Purpose: Executes almost all I/O callbacks, except for those that are close, timers, or set by setImmediate().
+Details: Handles callbacks deferred to the next iteration of the loop by certain system operations like TCP errors.
+Idle, Prepare
+
+Purpose: Only used internally. Prepare handles callbacks related to preparing for the event loop, and Idle handles callbacks when there’s nothing else to do.
+Details: Not generally used directly by most applications.
+Poll
+
+Purpose: Retrieves new I/O events; executes I/O related callbacks (almost all) except for those that have been deferred to the check phase.
+Details: Determines what to do based on events; either blocking to wait for new events or executing queued callbacks.
+Check
+
+Purpose: Executes callbacks scheduled by setImmediate().
+Details: Used to execute code after the poll phase has completed.
+Close Callbacks
+
+Purpose: Executes callbacks for events like socket.on('close', ...).
+Details: Handles cleanup or closing of resources.
+Detailed Flow
+Here's a more detailed explanation of the event loop's operation:
+
+Initialize: The event loop starts and initializes the environment.
+Timers Phase: Callbacks from setTimeout() and setInterval() are executed if their specified time has elapsed.
+I/O Callbacks Phase: Executes deferred callbacks, like errors from TCP operations.
+Idle, Prepare Phase: Internal use only.
+Poll Phase:
+If there are timers whose threshold has been reached, move to the next phase.
+If there are no timers, check for I/O events, and execute I/O callbacks.
+Check Phase: Executes callbacks from setImmediate().
+Close Callbacks Phase: Executes close event callbacks, e.g., from streams and sockets.
+Next Tick: process.nextTick() callbacks are executed immediately after the current operation completes, before the event loop continues.
 
 Features of Event Loop:
 

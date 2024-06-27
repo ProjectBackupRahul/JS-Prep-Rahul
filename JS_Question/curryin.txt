@@ -1,4 +1,5 @@
-It is a technique in functional programming, transformation of the function of multiple arguments
+It is a technique in functional programming, transformation of the function
+ of multiple arguments
 into several functions of a single argument in sequence. 
 
 The translation of function happens something like this,
