@@ -20,6 +20,7 @@ Explanation:
 
 map applies the function (num => num * num) to each element in numbers.
 Returns a new array squared with the squared values.
+
 filter
 The filter method creates a new array with all elements that pass the test implemented by the provided function.
 

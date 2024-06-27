@@ -1,0 +1,6 @@
+undefined: This indicates that a variable has been declared but not assigned a value. 
+It is also the default return value of functions that do not explicitly return a value.
+
+null: This is an explicit assignment representing "no value" or "empty." 
+It is often used to indicate that a variable should not have any value.
+
